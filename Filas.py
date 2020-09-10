@@ -9,15 +9,15 @@ class Queue:
             print("A fila está vazia!")
             return
         else:
-            print("A pilha não está vazia!")
+            print("A fila não está vazia!")
             return
     
     def is_full(self):
         if len(self.__fila) == self.__limite:
-            print("A pilha está cheia!")
+            print("A fila está cheia!")
             return
         else:
-            print("A pilha não está cheia!")
+            print("A fila não está cheia!")
             return
 
     @property

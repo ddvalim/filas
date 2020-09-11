@@ -20,9 +20,8 @@ class Queue:
             print("A fila não está cheia!")
             return
 
-    @property
     def show_queue(self):
-        return self.__fila
+        print(self.__fila)
     
     def push(self, elemento:int):
         if len(self.__fila) < self.__limite:
@@ -36,3 +35,12 @@ class Queue:
             self.__primeiro_elemento += 1
         else:
             raise Exception("Erro: a fila está vazia!")
+
+
+queue = Queue(10)
+queue.push(2)
+queue.push(5)
+queue.push(8)
+queue.push(7)
+queue.pop()
+queue.show_queue()

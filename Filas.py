@@ -2,7 +2,6 @@ class Queue:
     def __init__(self, limite):
         self.__fila = []
         self.__limite = limite
-        self.__final = 0 #iterável da fila que conta a posição do último elemento
 
     def is_empty(self):
         if len(self.__fila) == 0:
@@ -25,7 +24,6 @@ class Queue:
     
     def push(self, elemento:int):
         if len(self.__fila) < self.__limite:
-            self.__final += 1
             return self.__fila.append(elemento)
         else:
             raise Exception("Erro: a fila está cheia!")
@@ -47,4 +45,3 @@ queue.pop()
 queue.show_queue()
 queue.pop()
 queue.show_queue()
-
